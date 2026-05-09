@@ -1,8 +1,9 @@
-// Header inclusions, if any...
 #include "lib/cnn.cuh"
 #include "cnn_gpu.cuh"
 
-// Using declarations, if any...
+// Using thread block dims: 16 16 1
+// Using grid dims: 7 7 256
+// 297 GFlops
 
 __global__ void cnn_gpu(float* input, float* weight, float* bias, float* output) {
   // identify thread and create thread indices for output pixel (i, h, w)

@@ -1,12 +1,12 @@
 #include "lib/cnn.cuh"
 #include "cnn_gpu.cuh"
 
-// Using thread block dims: 8 8 1
-// Using grid dims: 14 14 256
-// 960 GFlops
+// Using thread block dims: 16 16 1
+// Using grid dims: 7 7 256
+// 1130 GFlops
 
-#define BLOCK_H 8
-#define BLOCK_W 8
+#define BLOCK_H 16
+#define BLOCK_W 16
 
 #define TILE_H (BLOCK_H * 2 + kKernel - 1)
 #define TILE_W (BLOCK_W * 2 + kKernel - 1)
